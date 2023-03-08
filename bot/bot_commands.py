@@ -67,6 +67,6 @@ async def game(call: types.CallbackQuery):
         video_text = "38.8"
         image = types.InputFile("./images/sale_images/388.png")
         text = results_text["38.8"]
-    await call.message.answer_video(video=video, caption=video_text)
-    await asyncio.sleep(3)
+    #await call.message.answer_video(video=video, caption=video_text)
+    #await asyncio.sleep(3)
     await call.message.answer_photo(photo=image, caption=text)
