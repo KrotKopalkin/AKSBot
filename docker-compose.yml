@@ -3,7 +3,7 @@ services:
   akstarbot:
     container_name: akstarbot
     build: .
-    restart: always
+    #restart: always
 volumes:
   postgres_data_back:
     driver: local
