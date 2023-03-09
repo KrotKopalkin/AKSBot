@@ -36,37 +36,37 @@ async def game(call: types.CallbackQuery):
             already_played.append(call.from_user.id)
     with open("already_played.json", "w") as f:
         json.dump(already_played, f)
-    randomint = random.choices([1, 2, 3, 4, 5, 6], weights=[0.05, 0.1, 0.2, 0.4, 0.2, 0.05], k=1)[0]
+    randomint = random.choices([1, 2, 3, 4, 5, 6], weights=[0.01, 0.1, 0.22, 0.42, 0.22, 0.01], k=1)[0]
     if randomint == 1:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/08.mp4")
         image = types.InputFile("./images/sale_images/08.png")
         video_text = "0.8"
         text = results_text["0.8"]
     elif randomint == 2:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/8.mp4")
         image = types.InputFile("./images/sale_images/8.png")
         video_text = "8"
         text = results_text["8"]
     elif randomint == 3:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/18.mp4")
         image = types.InputFile("./images/sale_images/18.png")
         video_text = "18"
         text = results_text["18"]
     elif randomint == 4:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/28.mp4")
         video_text = "28"
         image = types.InputFile("./images/sale_images/28.png")
         text = results_text["28"]
     elif randomint == 5:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/38.mp4")
         image = types.InputFile("./images/sale_images/38.png")
         video_text = "38"
         text = results_text["38"]
     elif randomint == 6:
-        video = types.InputFile("sample_gif.gif")
+        video = types.InputFile("./videos/388.mp4")
         video_text = "38.8"
         image = types.InputFile("./images/sale_images/388.png")
         text = results_text["38.8"]
-    #await call.message.answer_video(video=video, caption=video_text)
-    #await asyncio.sleep(3)
+    await call.message.answer_video(video=video)
+    await asyncio.sleep(15)
     await call.message.answer_photo(photo=image, caption=text)
