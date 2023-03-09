@@ -29,11 +29,12 @@ async def game(call: types.CallbackQuery):
         already_played = json.load(f)
         print(already_played)
         # мой - 505330351
-        if call.from_user.id in already_played:
+        if call.from_user.id in already_played and call.from_user.id not in [505330351, 193305875, 5299691720, 141811292]:
             await call.message.answer("Извини, но только один промокод для одного человека!")
             return
         else:
-            already_played.append(call.from_user.id)
+            if call.from_user.id not in  [505330351, 193305875, 5299691720, 141811292]:
+                already_played.append(call.from_user.id)
     with open("already_played.json", "w") as f:
         json.dump(already_played, f)
     randomint = random.choices([1, 2, 3, 4, 5, 6], weights=[0.01, 0.1, 0.22, 0.42, 0.22, 0.01], k=1)[0]
