@@ -29,11 +29,11 @@ async def game(call: types.CallbackQuery):
         already_played = json.load(f)
         print(already_played)
         # мой - 505330351
-        if call.from_user.id in already_played and call.from_user.id not in [505330351, 193305875, 5299691720, 141811292]:
+        if call.from_user.id in already_played and call.from_user.id not in [505330351, 193305875, 5299691720, 141811292, 401860914, 803812742, 1114482386, 547170709, 5081356958, 5770496288, 435590215]:
             await call.message.answer("Извини, но только один промокод для одного человека!")
             return
         else:
-            if call.from_user.id not in  [505330351, 193305875, 5299691720, 141811292]:
+            if call.from_user.id not in [505330351, 193305875, 5299691720, 141811292, 401860914, 803812742, 1114482386, 547170709, 5081356958, 5770496288, 435590215]:
                 already_played.append(call.from_user.id)
     with open("already_played.json", "w") as f:
         json.dump(already_played, f)
