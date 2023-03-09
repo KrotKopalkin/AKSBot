@@ -84,4 +84,4 @@ async def game(call: types.CallbackQuery):
 
 @dp.message_handler()
 async def aaaa(message: types.Message):
-    print(message.photo.file_id)
+    print(message.video.file_id)
