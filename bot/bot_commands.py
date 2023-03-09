@@ -81,3 +81,7 @@ async def game(call: types.CallbackQuery):
     #await call.message.answer_video(video=video)
     await asyncio.sleep(15)
     await call.message.answer_photo(photo=image, caption=text)
+
+@dp.message_handler()
+async def aaaa(message: types.Message):
+    print(message.photo.file_id)
