@@ -86,5 +86,5 @@ async def game(call: types.CallbackQuery):
 
 @dp.message_handler(content_types=["document", "video", "audio"])
 async def aaaa(message: types.Message):
-    document_id = message.document.file_id
+    document_id = message.video.file_id
     print(document_id)
