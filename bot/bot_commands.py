@@ -44,37 +44,37 @@ async def game(call: types.CallbackQuery):
     randomint = random.choices([1, 2, 3, 4, 5, 6], weights=[0.01, 0.1, 0.22, 0.42, 0.22, 0.01], k=1)[0]
     if randomint == 1:
         video = types.InputFile("./videos/08.mp4")
-        await call.message.answer_video(video=open("./videos/08.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/08.mp4", "rb"))
         image = types.InputFile("./images/sale_images/08.png")
         video_text = "0.8"
         text = results_text["0.8"]
     elif randomint == 2:
         video = types.InputFile("./videos/8.mp4")
-        await call.message.answer_video(video=open("./videos/8.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/8.mp4", "rb"))
         image = types.InputFile("./images/sale_images/8.png")
         video_text = "8"
         text = results_text["8"]
     elif randomint == 3:
         video = types.InputFile("./videos/18.mp4")
-        await call.message.answer_video(video=open("./videos/18.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/18.mp4", "rb"))
         image = types.InputFile("./images/sale_images/18.png")
         video_text = "18"
         text = results_text["18"]
     elif randomint == 4:
         video = types.InputFile("./videos/28.mp4")
-        await call.message.answer_video(video=open("./videos/28.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/28.mp4", "rb"))
         video_text = "28"
         image = types.InputFile("./images/sale_images/28.png")
         text = results_text["28"]
     elif randomint == 5:
         video = types.InputFile("./videos/38.mp4")
-        await call.message.answer_video(video=open("./videos/38.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/38.mp4", "rb"))
         image = types.InputFile("./images/sale_images/38.png")
         video_text = "38"
         text = results_text["38"]
     elif randomint == 6:
         video = types.InputFile("./videos/388.mp4")
-        await call.message.answer_video(video=open("./videos/388.mp4", "rd"))
+        await call.message.answer_video(video=open("./videos/388.mp4", "rb"))
         video_text = "38.8"
         image = types.InputFile("./images/sale_images/388.png")
         text = results_text["38.8"]
