@@ -45,41 +45,41 @@ async def game(call: types.CallbackQuery):
     randomint = random.choices([1, 2, 3, 4, 5, 6], weights=[0.01, 0.1, 0.22, 0.42, 0.22, 0.01], k=1)[0]
     if randomint == 1:
         video = types.InputFile("./videos/08.mp4")
-        await call.message.answer_video(video=open("./videos/08.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP1ZAo51DD2qsM3WLunW0kQXQEzxpgAApktAAK75lBIyWVlZrY5FrwvBA")
         image = types.InputFile("./images/sale_images/08.png")
         video_text = "0.8"
         text = results_text["0.8"]
     elif randomint == 2:
         video = types.InputFile("./videos/8.mp4")
-        await call.message.answer_video(video=open("./videos/8.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP3ZAo6Jb1CFS5VKEi4e4kV7iAPQQgAApotAAK75lBIu8tePstXESwvBA")
         image = types.InputFile("./images/sale_images/8.png")
         video_text = "8"
         text = results_text["8"]
     elif randomint == 3:
         video = types.InputFile("./videos/18.mp4")
-        await call.message.answer_video(video=open("./videos/18.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP5ZAo6mpONsDfjWyyTOCd7-HkC8MsAAp8tAAK75lBI7547xfNRpi8vBA")
         image = types.InputFile("./images/sale_images/18.png")
         video_text = "18"
         text = results_text["18"]
     elif randomint == 4:
         video = types.InputFile("./videos/28.mp4")
-        await call.message.answer_video(video=open("./videos/28.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP7ZAo66tgX5S_PhJ2FNpy9QYtIt1AAAqEtAAK75lBItjtQc2Ji9TYvBA")
         video_text = "28"
         image = types.InputFile("./images/sale_images/28.png")
         text = results_text["28"]
     elif randomint == 5:
         video = types.InputFile("./videos/38.mp4")
-        await call.message.answer_video(video=open("./videos/38.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP9ZAo7L_UOQJ3z7tTMfA5RFiKmVeYAAqItAAK75lBIOxp1cl1CAAH5LwQ")
         image = types.InputFile("./images/sale_images/38.png")
         video_text = "38"
         text = results_text["38"]
     elif randomint == 6:
         video = types.InputFile("./videos/388.mp4")
-        await call.message.answer_video(video=open("./videos/388.mp4", "rb"))
+        await call.message.answer_video("BAACAgIAAxkBAAP_ZAo7gLvVlN-z_h2p2vhRzHikM4gAAqYtAAK75lBIo_40DQm_Pl8vBA")
         video_text = "38.8"
         image = types.InputFile("./images/sale_images/388.png")
         text = results_text["38.8"]
-    await call.message.answer_video("BAACAgIAAxkBAAPmZAo4JgY1-kqRmp6xl_QJDxQfE2oAAowtAAK75lBIrz6qR7rqK_8vBA")
+    #await call.message.answer_video("BAACAgIAAxkBAAPmZAo4JgY1-kqRmp6xl_QJDxQfE2oAAowtAAK75lBIrz6qR7rqK_8vBA")
     await asyncio.sleep(15)
     await call.message.answer_photo(photo=image, caption=text)
 
